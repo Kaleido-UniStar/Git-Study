@@ -1,11 +1,19 @@
 #include <stdio.h>
-
+int jaehyuk(float);
 void kimeunjee();
 int yearCheck(int year);
+int ohjunyeop();
 
-int main() {
-	kimeunjee();
+int main()
+{
+	jaehyuk(3000);
+  kimeunjee();
+  ohjunyeop();
 	return 0;
+}
+void jaehyuk(float meter)
+{
+	printf("%.2f", meter/1000);	
 }
 
 void kimeunjee()
@@ -33,4 +41,22 @@ int yearCheck(int year)
 	else {
 		return 1;
 	}
+  int ohjunyeop()
+{
+	int num = 5;
+	for (int i = 0; i < num; i++)
+	{
+		for (int j = num - 1; j > i; j--)
+		{
+			printf(" ");
+		}
+
+		for (int j = 0; j < 2 * i + 1; j++)
+		{
+			printf("*");
+		}
+		printf("\n");
+
+	}
+	return 0;
 }
